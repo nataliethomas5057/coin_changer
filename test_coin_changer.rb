@@ -17,4 +17,9 @@ class TestCoinChanger < Minitest::Test
 		assert_equal({:dime=>10}, coin_changer(cents))
 	end	
 
+	def test_1_cent_returns_penny
+		cents = 1
+		assert_equal({:penny=>1}, coin_changer(cents))
+	end	
+
 end		
