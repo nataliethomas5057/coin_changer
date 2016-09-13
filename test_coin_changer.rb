@@ -3,14 +3,18 @@ require_relative "coin_changer.rb"
 
 class TestCoinChanger < Minitest::Test
 	def test_0_cents_returns_empty_hash
-		cents_received = 0
-		assert_equal({}, coin_changer(cents_received))
+		cents = 0
+		assert_equal({}, coin_changer(cents))
 	end
 
 	def test_5_cents_returns_nickel
-		cents_received = 5
-		assert_equal({:nickel=>5}, coin_changer(cents_received))
+		cents = 5
+		assert_equal({:nickel=>5}, coin_changer(cents))
 	end
 
+	def test_10_cents_returns_dime
+		cents = 10
+		assert_equal({:dime=>10}, coin_changer(cents))
+	end	
 
 end		
