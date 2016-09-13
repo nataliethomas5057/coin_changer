@@ -1,3 +1,9 @@
 def coin_changer(cents)
-	change = {:quarter=>"25"; :dime=>"10", :nickel=>"5", :penny="one"}
+	change = {}
+	if cents == 5
+		change[:nickel] = 5
+	end
+	change
 end	
+
+change = coin_changer(5)
