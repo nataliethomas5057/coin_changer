@@ -3,7 +3,9 @@ def coin_changer(cents)
 	if cents == 5
 		change[:nickel] = 5
 	end
+	if cents == 1
+		change[:penny] = 1
+	end	
 	change
 end	
 
-change = coin_changer(5)
